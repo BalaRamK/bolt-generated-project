@@ -1,0 +1,478 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #051B2C; /* Dark Blue */
+  color: #fff; /* White */
+  font-family: Arial, sans-serif; /* Default font */
+}
+
+.header {
+  background-color: #041524; /* Slightly Lighter Dark Blue */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.navbar-links {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.2s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent; /* Initially transparent */
+}
+
+.navbar a:hover {
+  background-color: #03101D; /* Even Lighter Dark Blue */
+}
+
+.navbar a.active {
+  border-bottom: 2px solid white; /* White line for active link */
+}
+
+.contact-button {
+  background-color: #fff;
+  color: #051B2C; /* Dark Blue for text */
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.contact-button:hover {
+  background-color: #eee; /* Light Gray */
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Changed to flex-start */
+  padding: 2rem;
+  height: 80vh; /* Increased height */
+  background-image: url('./assets/hero-background.jpg'); /* Placeholder image - replace with your image path */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-content {
+  text-align: left; /* Left align the content */
+  max-width: 800px;
+  margin-left: 4rem; /* Add margin to move content to the left */
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: white;
+  font-family: Georgia, serif; /* Georgia for headings */
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc; /* Light Gray for paragraph text */
+  margin-bottom: 2rem;
+}
+
+.download-button {
+  background: none; /* Remove background fill */
+  color: #fff; /* White text */
+  border: 2px solid #fff; /* White border */
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  display: inline-flex;
+  align-items: center;
+}
+
+.download-button:hover {
+  color: #051B2C; /* Dark Blue text on hover */
+  background-color: #fff; /* White background on hover */
+}
+
+.download-button:hover .arrow {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+}
+
+.arrow {
+  margin-left: 0.5rem;
+  transition: transform 0.3s ease; /* Add transition for smooth animation */
+}
+
+.bio {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #f0f0f0; /* Very Light Gray */
+}
+
+.bio h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: Georgia, serif; /* Georgia for headings */
+  color: #000; /* Black color for heading */
+}
+
+.bio-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio-card {
+  padding: 2rem;
+  text-align: left;
+  background-color: transparent; /* Remove background from bio cards */
+  box-shadow: none; /* Remove shadow */
+}
+
+.bio-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: Georgia, serif; /* Georgia for headings */
+  color: #000; /* Black color for heading */
+}
+
+.bio-card p {
+  font-size: 1rem;
+  color: #000; /* Black color for paragraph text */
+  line-height: 1.6;
+}
+
+.contact-me-button {
+  background: none; /* Remove background fill */
+  color: #007bff; /* Blue color for the button */
+  border: 2px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.contact-me-button:hover {
+  color: #fff; /* White text on hover */
+  background-color: #007bff; /* Black background on hover */
+}
+
+.contact-me-button:hover .arrow {
+  transform: translateX(5px); /* Move arrow to the right on hover */
+}
+
+.contact-button-mobile {
+  display: none;
+  background-color: #fff;
+  color: #051B2C;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-left: 1rem;
+}
+
+.contact-button-mobile:hover {
+  background-color: #eee;
+}
+
+.quote-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quote-content {
+  background-color: #007bff; /* Blue color from the image */
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  width: 80%; /* Adjust width as needed */
+}
+
+.quote-text {
+  font-size: 1.5rem; /* Increased font size */
+  margin-bottom: 1rem;
+  font-style: italic;
+  color: #f0f8ff; /* Light Blue color for quotes */
+}
+
+.profile-picture {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  border-radius: 50%;
+  position: absolute;
+  top: -40px; /* Adjust position as needed */
+  right: 20px; /* Adjust position as needed */
+  border: 4px solid #041524; /* Add a border to the image */
+  object-fit: cover;
+}
+
+.education-card {
+  text-align: left;
+}
+
+.education-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: Georgia, serif;
+  color: #000; /* Black color for heading */
+}
+
+.education-card p {
+  font-size: 0.9rem;
+  color: #000; /* Black color for paragraph text */
+  margin-bottom: 1rem;
+}
+
+.education-card ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin-bottom: 1rem;
+}
+
+.education-card li {
+  font-size: 0.9rem;
+  color: #000; /* Black color for list items */
+  line-height: 1.4;
+}
+
+.education-card hr {
+  border: 0;
+  border-top: 1px solid #555;
+  margin: 1rem 0;
+}
+
+.explore-education-button {
+  background: none;
+  color: #007bff; /* Blue color for the button */
+  border: 2px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.explore-education-button:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.explore-education-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.experience {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: #fff; /* White background for the experience section */
+}
+
+.experience h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: Georgia, serif;
+  color: #000;
+}
+
+.experience-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.experience-table td {
+  padding: 1rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: #000; /* Black color for text in the table */
+}
+
+.company {
+  font-weight: bold;
+  width: 20%; /* Adjust width as needed */
+}
+
+.details {
+  width: 60%; /* Adjust width as needed */
+}
+
+.tags {
+  width: 20%;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+  justify-content: flex-start;
+}
+
+.tag {
+  background-color: #007bff; /* Blue color for tags */
+  color: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.explore-profession-button {
+  background: none;
+  color: #007bff; /* Blue color for the button */
+  border: 2px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.explore-profession-button:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.explore-profession-button:hover .arrow {
+  transform: translateX(5px);
+}
+
+.projects {
+  padding: 4rem 2rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  font-family: Georgia, serif;
+  color: #000;
+  margin-bottom: 2rem;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.project-card {
+  width: 45%; /* Adjust as needed */
+  margin-bottom: 2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #e6f2ff; /* Light Blue Background */
+  text-align: left;
+}
+
+.project-title {
+  font-size: 1.5rem;
+  font-family: Georgia, serif;
+  color: #000;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #000;
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.continue-reading-button {
+  background: none;
+  color: #007bff;
+  border: 2px solid #007bff;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  margin: 1rem;
+}
+
+.continue-reading-button:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+.continue-reading-button .arrow {
+  transform: translateX(5px);
+}
+
+.footer {
+  background-color: #051B2C;
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: 2rem;
+}
+
+/* Add active state styles */
+.navbar a.active {
+  border-bottom: 2px solid white;
+}
