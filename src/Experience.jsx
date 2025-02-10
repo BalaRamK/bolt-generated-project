@@ -1,9 +1,32 @@
 import React from 'react';
 import './App.css';
+import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaChartLine, FaUsers, FaShieldAlt, FaNetworkWired, FaCloud, FaRocket } from 'react-icons/fa'; // Import icons
 
 function Experience() {
+  const keySkills = [
+    { icon: <FaCode />, skill: 'Web Development' },
+    { icon: <FaLaptopCode />, skill: 'Frontend Development' },
+    { icon: <FaServer />, skill: 'Backend Development' },
+    { icon: <FaDatabase />, skill: 'Database Management' },
+    { icon: <FaChartLine />, skill: 'Data Analysis' },
+    { icon: <FaUsers />, skill: 'Teamwork' },
+    { icon: <FaShieldAlt />, skill: 'Cybersecurity' },
+    { icon: <FaNetworkWired />, skill: 'Networking' },
+    { icon: <FaCloud />, skill: 'Cloud Computing' },
+    { icon: <FaRocket />, skill: 'Project Management' },
+  ];
+
   return (
     <div className="experience-page">
+      <h2>Key Skills</h2>
+      <div className="skills-container">
+        {keySkills.map((skill, index) => (
+          <div className="skill-tile" key={index}>
+            <span className="skill-icon">{skill.icon}</span>
+            <span className="skill-text">{skill.skill}</span>
+          </div>
+        ))}
+      </div>
       <h2>Professional Experience</h2>
       <div className="timeline">
         <div className="timeline-item">
@@ -55,26 +78,6 @@ function Experience() {
             </div>
             <p className="timeline-role">Consultant – Pre-Sales & Customer Success, Dubai & Bangalore</p>
             <p className="timeline-date">May 2019 - Nov 2021</p>
-            <ul>
-              <li>Spearheaded the role of the first Pre-Sales and Techno-Business consulting hire, contributing to the company's growth and success.</li>
-              <li>Successfully coordinated and provided consulting services for six cross-functional teams, collaborating with global, multi-cultural teams across India, MEA, and the USA.</li>
-              <li>Innovatively implemented pioneering solutions, use cases, and integrations within the industry, resulting in an impressive 75% conversion probability to Proof of Concept (PoC) and driving $5 million Pre-Sales funnel</li>
-              <li>Achieved a remarkable promotion by completing a 2-year Key Performance Indicator (KPI) in just a 6-month period, representing QNu Labs in the MEA region, and facilitating expansion into the USA market.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="timeline-item">
-          <div className="timeline-content">
-            <div className="timeline-company">
-              <h3 className="timeline-title">Middle Earth HR</h3>
-            </div>
-            <p className="timeline-role">Marketing Intern, Hyderabad</p>
-            <p className="timeline-date">Mar 2018 - Apr 2018</p>
-            <ul>
-              <li>Achieved the lowest Customer Acquisition Cost within the organization by successfully implementing a new marketing strategy.</li>
-              <li>Pioneered a YouTube strategy for competitive advantage, resulting in an impressive 10X decrease in Customer Acquisition Cost for new programs</li>
-            </ul>
           </div>
         </div>
 
@@ -85,12 +88,6 @@ function Experience() {
             </div>
             <p className="timeline-role">Embedded Systems Analyst, Hyderabad</p>
             <p className="timeline-date">Aug 2015 - May 2017</p>
-            <ul>
-              <li>Specialized in Automotive Safety Lifecycle Management with a focus on braking systems.</li>
-              <li>Achieved a 50% reduction in analysis time and a 70% decrease in testing time for critical tasks including Design Failure Mode and Effects Analysis (DFMEA), Reliability Hazard and Failure Mode (RHFM) analysis, and Reliability analysis.</li>
-              <li>Played a crucial role in training new team members, ensuring their seamless integration into the team's workflow.</li>
-              <li>Represented the team in clie</li>
-            </ul>
           </div>
         </div>
       </div>

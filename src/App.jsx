@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-import { FaCode, FaLaptopCode, FaServer, FaDatabase, FaChartLine, FaUsers, FaShieldAlt, FaNetworkWired, FaCloud, FaRocket } from 'react-icons/fa'; // Import icons
 import Experience from './Experience'; // Import the Experience component
 
 function App() {
@@ -19,19 +18,6 @@ function App() {
       setIsMenuOpen(false); // Close menu on link click (for mobile)
     }
   };
-
-  const keySkills = [
-    { icon: <FaCode />, skill: 'Web Development' },
-    { icon: <FaLaptopCode />, skill: 'Frontend Development' },
-    { icon: <FaServer />, skill: 'Backend Development' },
-    { icon: <FaDatabase />, skill: 'Database Management' },
-    { icon: <FaChartLine />, skill: 'Data Analysis' },
-    { icon: <FaUsers />, skill: 'Teamwork' },
-    { icon: <FaShieldAlt />, skill: 'Cybersecurity' },
-    { icon: <FaNetworkWired />, skill: 'Networking' },
-    { icon: <FaCloud />, skill: 'Cloud Computing' },
-    { icon: <FaRocket />, skill: 'Project Management' },
-  ];
 
   return (
     <div className="app">
@@ -52,19 +38,6 @@ function App() {
           <button className="contact-button">Contact Me</button>
         </nav>
       </header>
-
-      {/* Key Skills Section */}
-      <section className="key-skills">
-        <h2>Key Skills</h2>
-        <div className="skills-container">
-          {keySkills.map((skill, index) => (
-            <div className="skill-tile" key={index}>
-              <span className="skill-icon">{skill.icon}</span>
-              <span className="skill-text">{skill.skill}</span>
-            </div>
-          ))}
-        </div>
-      </section>
 
       {/* Render content based on the current page */}
       {currentPage === 'home' && (
